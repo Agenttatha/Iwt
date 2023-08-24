@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>calculator</title>
+    <style>
+        .input {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table border="1px">
+            <tr>
+                <td>
+                    <input class='input' type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input onclick='display(1);' type="button" class='btn1' value="1" />
+                    <input onclick='display(2);' type="button" class='btn2' value="2" />
+                    <input onclick='display(3);' type="button" class='btn3' value="3" />
+                    <input onclick="display('+');" type="button" class='btn+' value="+" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input onclick='display(4);' type="button" class='btn4' value="4" />
+
+                    
+                    <input onclick='display(5);' type="button" class='btn5' value="5" />
+                    <input onclick='display(6);' type="button" class='btn6' value="6" />
+                    <input onclick='display("-");' type="button" class='btn-' value="-" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input onclick='display(7);' type="button" class='btn7' value="7" />
+                    <input onclick='display(8);' type="button" class='btn8' value="8" />
+                    <input onclick='display(9);' type="button" class='btn9' value="9" />
+                    <input onclick='display("*");' type="button" class='btn' value="*" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" class='btn1' value="c" />
+                    <input onclick='display(0);' type="button" class='btn1' value="0" />
+                    <input onclick='perform("=");' type="button" class='btnEql' value="=" />
+                    <input onclick='display("/");' type="button" class='btn1' value="/" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="calci.js"></script>
+</body>
+
+</html>
