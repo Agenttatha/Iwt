@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE stock[
+<!ELEMENT stock (new-car,used-car*)>
+<!ELEMENT  new-car (model*,price*)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT used-car (model,price,mileage,condition*)>
+
+
+<!ELEMENT mileage (#PCDATA)>
+<!ELEMENT condition (#PCDATA)>]>
+
+<stock>
+<new-car>
+<model>Fiat</model>
+<price>12000</price>
+</new-car>
+<used-car>
+<model>Fiat Bravo</model>
+<price>4000</price>
+<mileage>1000</mileage>
+<condition>Good</condition>
+</used-car>
+<used-car>
+<model>Ferrari</model>
+<price>400000</price>
+<mileage>100</mileage>
+</used-car>
+</stock>

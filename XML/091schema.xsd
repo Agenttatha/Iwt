@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bookstore" type="bookstoreType"/>
+    <xs:complexType name="bookstoreType">
+        <xs:sequence>
+            <xs:element ref="book" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="book" type="bookType"/>
+    <xs:complexType name="bookType">
+        <xs:sequence>
+            <xs:element ref="title" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="author" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="genre" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="price" type="xs:int" use="required"/>
+        <xs:attribute name="ISBN" type="xs:string" use="required"/>
+        <xs:attribute name="publicationdate" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="author" type="authorType"/>
+    <xs:element name="genre" type="xs:string"/>
+    <xs:complexType name="authorType">
+        <xs:sequence>
+            <xs:element ref="first-name" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="last-name" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>    
+    <xs:element name="first-name" type="xs:string"/>
+    <xs:element name="last-name" type="xs:string"/>
+</xs:schema>
+
+            

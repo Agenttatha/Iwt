@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE college[
+<!ELEMENT college (student,staff)>
+<!ELEMENT student (sid,sname)>
+<!ELEMENT sid (#PCDATA)>
+<!ELEMENT sname (#PCDATA)>
+<!ELEMENT staff (staffid,staffname)>
+<!ELEMENT staffid (#PCDATA)>
+<!ELEMENT staffname ()>]>
+<college>
+<student>
+<sid> 101 </sid>
+<sname> ABC </sname>
+</student>
+<staff>
+ <staffid> 202 </staffid>
+ <staffname> XYZ </staffname>
+</staff>
+</college>

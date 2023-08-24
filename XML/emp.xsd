@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="employee" type="employeeType"/>
+    <xs:complexType name="employeeType">
+        <xs:sequence>
+            <xs:element ref="Employee_Element" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Employee_Element" type="Employee_ElementType"/>
+    <xs:complexType name="Employee_Type">
+        <xs:sequence>
+            <xs:element ref="Name" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Department" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Telephone" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Email" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="Employee_Number" type="xs:long" use="required"/>
+    </xs:complexType>
+    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="Department" type="xs:string"/>
+    <xs:element name="Telephone" type="xs:string"/>
+    <xs:element name="Email" type="xs:string"/>
+</xs:schema>
