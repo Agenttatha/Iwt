@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Click to display image</h1>
+    <div onmousedown="display()" onmouseup="hide()">
+        <img src="bg-login.jpg" alt="img" id="img" style="position: relative; visibility: hidden;">
+
+    </div>
+
+    <script>
+        var x = document.getElementById('img')
+
+        function hide() {
+            x.style.visibility = 'hidden'
+        }
+
+        function display() {
+            x.style.visibility = 'visible'
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="myFunc(event)">
+        <h1>Click anywhere on screen and know the coords</h1>
+        <span>X Coords are: </span><span id="xcoords"></span>
+        <span>Y Coords are: </span><span id="ycoords"></span>
+    </div>
+
+    <script>
+        function myFunc(e) {
+
+            var xcoords = e.clientX
+            var ycoords = e.clientY
+            document.getElementById("xcoords").innerHTML = xcoords
+            document.getElementById("ycoords").innerHTML = ycoords
+        }
+    </script>
+</body>
+
+</html>

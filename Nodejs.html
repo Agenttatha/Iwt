@@ -1,0 +1,53 @@
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>PHN_TASK_3</title>
+    </head>
+    <body>
+      <div align='center'  style='margin-left:15%;margin-right:15%;margin-top:15%;margin-bottom:15%;background-color:#8ac9eb'>
+        <table cellspacing='15'>
+          <tr>
+            <td><a style='text-decoration:none;' href="#" id="1" ></a></td>
+            <td><a style='text-decoration:none;' href="#" id="2"></a></td>
+            <td><a style='text-decoration:none;' href="#" id="3"></a></td>
+            <td><a style='text-decoration:none;' href="#" id="4"></a></td>
+          </tr>
+        </table>
+        <h1>Welcome!</h1>
+        <p>Welcome to Hello Electronics website. We provide high quality and wide range of products. We have 3000+ products overall,no more delay <br><b>START YOUR SHOPPING!!</b></p>
+        <img width='200px' height="200px" src="https://5.imimg.com/data5/OV/KM/CR/ANDROID-37090388/product-jpeg-500x500.jpg">
+        <img width='200px' height='200px' src="https://cdn.shopify.com/s/files/1/0070/7032/files/start-a-clothing-line-retail.jpg?v=1635875038" alt="">
+        <img width='200px' height='200px' src="https://images.hindustantimes.com/img/2022/12/22/550x309/istockphoto-1279108197-170667a_1671687926903_1671687937504_1671687937504.jpg">
+        <img width='200px' height='200px' src="https://img.staticmb.com/mbcontent//images/uploads/2022/3/home-furniture-ideas.jpg">
+      </div>
+    
+  
+  
+    </body>
+    <script>
+      var shop={'elec':'Mobiles','cloth':'laptops','foot':'Audio','furr':'Television'}
+      document.getElementById('1').innerHTML=shop.elec
+      document.getElementById('2').innerHTML=shop.cloth
+      document.getElementById('3').innerHTML=shop.foot
+      document.getElementById('4').innerHTML=shop.furr
+  
+      
+    </script>
+  </html>
+  
+  
+  `);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="initfunction()">
+    <img src="bg-login.jpg" alt="img" id="img" style="position: relative; top: 0px; right: 0px;">
+
+</body>
+
+<script>
+    var final = 700
+    var z = document.getElementById('img').style
+    var x, y
+    function initfunction() {
+        x = parseInt(z.top)
+        y = parseInt(z.left)
+        moveImage(x, y)
+
+    }
+
+    function moveImage(x, y) {
+        x++
+        y++
+        if (x <= final) {
+            z.left = x + "px";
+            z.top = y + "px";
+            setTimeout("moveImage(" + x + "," + y + ")", 5);
+
+        }
+
+    }
+</script>
+
+</html>

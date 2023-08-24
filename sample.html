@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Read and Print JSON with AJAX</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        // Wrap the code in a function
+        function displayJSONData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "data.json", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var output = document.getElementById("output");
+                        output.innerHTML = data.age; // Pretty print JSON
+                    } else {
+                        console.error("Failed to fetch data.json. Status code: " + xhr.status);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // Call the function when the window loads
+        window.onload = displayJSONData;
+    </script>
+</body>
+
+</html>
