@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positioning Example</title>
+    <style>
+        .div1 {
+            position: relative;
+            top: 50px;
+            left: 100px;
+            background-color: aqua;
+            border: 10px solid black;
+            padding: 20px;
+        }
+
+        .div2 {
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            background-color: yellow;
+            border: 2px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        This is a relative positioned div.
+    </div>
+    <div class="div2">
+        This is an absolute positioned div.
+    </div>
+</body>
+</html>
