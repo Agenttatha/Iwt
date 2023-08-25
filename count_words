@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character, Word, and Line Counter</title>
+</head>
+
+<body>
+    <textarea id="inputText" rows="10" cols="50"></textarea>
+    <br>
+    <div>
+        <p>Character Count: <span id="charCount">0</span></p>
+        <p>Word Count: <span id="wordCount">0</span></p>
+        <p>Line Count: <span id="lineCount">0</span></p>
+    </div>
+
+    <script>
+        const inputText = document.getElementById('inputText');
+        const charCount = document.getElementById('charCount');
+        const wordCount = document.getElementById('wordCount');
+        const lineCount = document.getElementById('lineCount');
+
+        inputText.addEventListener('input', () => {
+            const text = inputText.value;
+
+            // Character count
+            charCount.textContent = text.length;
+
+            // Word count
+            const words = text.trim().split(/\s+/);
+            wordCount.textContent = words.length === 1 && words[0] === '' ? 0 : words.length;
+
+            // Line count
+            const lines = text.split('\n');
+            lineCount.textContent = lines.length;
+        });
+    </script>
+</body>
+
+</html>
