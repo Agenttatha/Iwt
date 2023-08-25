@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events with jQuery</title>
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Some simple CSS for demonstration purposes */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="clickBox">Click me!</div>
+    <div class="box" id="hoverBox">Hover over me!</div>
+    <div class="box" id="enterLeaveBox">Mouse Enter/Leave</div>
+
+    <!-- JavaScript code for handling mouse events with jQuery -->
+    <script>
+        $(document).ready(function () {
+            // Click event
+            $("#clickBox").click(function () {
+                alert("Box clicked!");
+            });
+
+            // Hover event
+            $("#hoverBox").hover(
+                function () {
+                    $(this).css("background-color", "lightgreen");
+                },
+                function () {
+                    $(this).css("background-color", "lightblue");
+                }
+            );
+
+            // Mouse Enter/Leave events
+            $("#enterLeaveBox").mouseenter(function () {
+                $(this).css("background-color", "orange");
+            }).mouseleave(function () {
+                $(this).css("background-color", "lightblue");
+            });
+        });
+    </script>
+</body>
+
+</html>
