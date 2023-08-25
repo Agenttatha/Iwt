@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Enter Number: <input type="number" placeholder="Enter Value" id="num">
+    <input type="submit" value="Submit" onclick="myFunc()">
+
+    <script>
+        function myFunc() {
+            var num = document.getElementById("num").value;
+            var digits = [];
+            var names = {
+                1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"
+            }
+
+            while (num > 0) {
+                var digit = num % 10;
+                digits.unshift(digit); // Add the digit to the beginning of the array
+                num = Math.floor(num / 10); // Remove the last digit
+            }
+
+            var digitWords = digits.map(function (digit) {
+                return names[digit];
+            });
+
+            console.log("Digits extracted: " + digitWords.join(', '));
+        }
+    </script>
+</body>
+
+</html>
