@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Responsive Page</title>
+    <!-- Add the Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css%22%3E
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Responsive Page</h1>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-4 col-sm-6">
+                <button class="btn btn-primary btn-block">Button 1</button>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <button class="btn btn-success btn-block">Button 2</button>
+            </div>
+        </div>
+    </div>
