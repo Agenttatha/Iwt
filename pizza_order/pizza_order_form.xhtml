@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Pizza Order Form</title>
+    <style>
+      input[type='button'],input[type='reset'],.total{
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+        <h1>Pizza order form</h1>
+        <table border="1px">
+            <tr>
+                <th>Item name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Chicken Pizza</td>
+                <td>100</td>
+                <td>
+                    <input class='cp' type="text"/>
+                </td>
+            </tr>
+            <tr>
+              <td>Panner Pizza</td>
+              <td>80</td>
+              <td>
+                  <input class="pp" type="text"/>
+              </td>
+          </tr>
+          <tr>
+            <td>Veg Pizza</td>
+            <td>70</td>
+            <td>
+                <input class="vp" type="text"/>
+            </td>
+        </tr>
+        </table>
+        <input onclick="calculate_total_cost();" type="button" value="total cost"/>
+        <input class='total' onfocus="this.blur()" type="text"/><br/>
+        <input onclick="confirm_order();" type="button" value="confirm order"/>
+        <input type="reset" value="cancel order"/>
+    </form>
+    <script src="pizza_js.js"></script>
+  </body>
+</html>
